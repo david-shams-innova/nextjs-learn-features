@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Boxes Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .left .box {
+            background-color: #3498db;
+        }
+
+        .right .box {
+            background-color: #e74c3c;
+        }
+
+        .line {
+            position: absolute;
+            height: 2px;
+            transform-origin: left center;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-out;
+        }
+
+        #lineA3 { background: linear-gradient(to right, #3498db, #9b59b6); }
+        #lineB4 { background: linear-gradient(to right, #3498db, #e67e22); }
+        #lineC1 { background: linear-gradient(to right, #3498db, #2ecc71); }
+        #lineD2 { background: linear-gradient(to right, #3498db, #f1c40f); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-container left">
+            <div class="box" id="boxA">A</div>
+            <div class="box" id="boxB">B</div>
+            <div class="box" id="boxC">C</div>
+            <div class="box" id="boxD">D</div>
+        </div>
+        <div class="box-container right">
+            <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+            <div class="box" id="box4">4</div>
+        </div>
+    </div>
+    <div id="lineA3" class="line"></div>
+    <div id="lineB4" class="line"></div>
+    <div id="lineC1" class="line"></div>
+    <div id="lineD2" class="line"></div>
+
+    <script>
+        function drawLine(startElement, endElement, lineElement) {
+            const start = startElement.getBoundingClientRect();
+            const end = endElement.getBoundingClientRect();
+            
+            const x1 = start.left + start.width / 2;
+            const y1 = start.top + start.height / 2;
+            const x2 = end.left + end.width / 2;
+            const y2 = end.top + end.height / 2;
+            
+            const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+            const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+            
+            lineElement.style.width = `${length}px`;
+            lineElement.style.left = `${x1}px`;
+            lineElement.style.top = `${y1}px`;
+            lineElement.style.transform = `rotate(${angle}deg) scaleX(1)`;
+        }
+
+        function handleScroll() {
+            const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+            if (scrollPercentage > 0.25) {
+                drawLine(document.getElementById('boxA'), document.getElementById('box3'), document.getElementById('lineA3'));
+                drawLine(document.getElementById('boxB'), document.getElementById('box4'), document.getElementById('lineB4'));
+                drawLine(document.getElementById('boxC'), document.getElementById('box1'), document.getElementById('lineC1'));
+                drawLine(document.getElementById('boxD'), document.getElementById('box2'), document.getElementById('lineD2'));
+            } else {
+                document.querySelectorAll('.line').forEach(line => {
+                    line.style.transform = 'scaleX(0)';
+                });
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        handleScroll();
+    </script>
+</body>
+</html>
