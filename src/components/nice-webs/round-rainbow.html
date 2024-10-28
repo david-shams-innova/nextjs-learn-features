@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+        <!-- Define the rainbow gradient with opacity -->
+        <defs>
+          <linearGradient id="rainbowGradient" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color: rgba(255, 0, 0, 0.8)"/>
+            <stop offset="17%" style="stop-color: rgba(255, 165, 0, 0.8)"/>
+            <stop offset="33%" style="stop-color: rgba(255, 255, 0, 0.8)"/>
+            <stop offset="50%" style="stop-color: rgba(0, 255, 0, 0.8)"/>
+            <stop offset="67%" style="stop-color: rgba(0, 0, 255, 0.8)"/>
+            <stop offset="83%" style="stop-color: rgba(75, 0, 130, 0.8)"/>
+            <stop offset="100%" style="stop-color: rgba(238, 130, 238, 0.8)"/>
+          </linearGradient>
+        </defs>
+      
+        <!-- Background rectangle -->
+        <rect width="300" height="100" fill="white"/>
+        
+        <!-- Gradient border using a single rectangle with rounded corners -->
+        <rect 
+          x="20" 
+          y="20" 
+          width="260" 
+          height="60" 
+          rx="20" 
+          ry="20"
+          fill="none" 
+          stroke="url(#rainbowGradient)"
+          stroke-width="20"
+        />
+        
+        <!-- Inner rectangle with rounded corners to create clean inner edge -->
+        <rect 
+          x="30" 
+          y="30" 
+          width="240" 
+          height="40" 
+          rx="15" 
+          ry="15"
+          fill="white"
+        />
+        
+        <!-- Text in the center -->
+        <text 
+          x="150" 
+          y="55" 
+          text-anchor="middle" 
+          font-family="Arial" 
+          font-size="20" 
+          fill="black"
+        >Loan AI</text>
+      </svg>
+</body>
+</html>

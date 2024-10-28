@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .scroll-animate {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .scroll-animate img {
+        width: 80%;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center center;
+        opacity: 0; /* Starts invisible */
+        transform: scale(0.8); /* Starts smaller */
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.addEventListener("scroll", () => {
+        const image = document.querySelector(".scroll-animate img");
+        const scrollY = window.scrollY; // Get current scroll position
+
+        // Calculate an animation value (change factors to suit your design)
+        const scaleValue = 1 + scrollY * 0.0005;
+        const opacityValue = Math.min(1, scrollY * 0.002);
+
+        // Apply transformations
+        image.style.transform = `scale(${scaleValue})`;
+        image.style.opacity = opacityValue;
+      });
+    </script>
+  </head>
+  <body>
+    <div class="scroll-animate">
+      <img src="https://githubuniverse.com/hero-static.webp" alt="Scroll Animation" />
+    </div>
+  </body>
+</html>
