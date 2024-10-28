@@ -81,6 +81,8 @@ const PageLayout = () => {
 
       {/* Main Content */}
       <main className="flex-grow container mx-auto px-4 py-8">
+      {/* <main className="flex min-h-screen flex-col items-center justify-between "> */}
+
         <RainbowBorder>
           <h2 className="text-xl font-semibold">{data.main.title}</h2>
         </RainbowBorder>

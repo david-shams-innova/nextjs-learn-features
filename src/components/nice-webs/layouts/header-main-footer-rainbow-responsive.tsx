@@ -153,7 +153,10 @@ const PageLayoutResponsive = () => {
       />
 
       {/* Main Content */}
-      <main className="flex-grow container mx-auto px-4 py-8">
+      {/* <main className="flex-grow container mx-auto px-4 py-8"> */}
+      {/* <main className="flex min-h-screen flex-col items-center justify-between p-24"> */}
+      <main className="flex items-center justify-center">
+
         {/* <RainbowBorder>
           <h2 className="text-xl font-semibold text-center">{data.main.title}</h2>
           <ExampleUsage />
