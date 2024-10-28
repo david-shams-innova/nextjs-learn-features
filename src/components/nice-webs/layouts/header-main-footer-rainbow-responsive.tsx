@@ -105,13 +105,13 @@ const PageLayoutResponsive = () => {
       title: "Loan AI",
       content: "What you get",
       features: [
-        "AP Processing: Let AI work for you",
+        "AI Processing: Let AI work for you",
         "Reliable Processing: Eliminate human errors",
-        "Fast Processing: Does not go on leave, or get sick",
+        "Fast Processing: Does't get sick, or go on leave",
       ],
     },
     footer: {
-      copyright: "© 2024 Rainbow Company",
+      copyright: "© 2024 LoanAI",
       links: ["Privacy", "Terms", "Support"],
       social: ["Twitter", "Facebook", "Instagram"],
     },
