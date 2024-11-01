@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import ExampleUsage from "./robot-processint-application";
+import RobotCalculator from "@/components/animate-webp/robot-creating-mortgate-application-3";
 
 const RainbowBorder = ({ children }) => (
   <div className="relative">
@@ -156,17 +157,8 @@ const PageLayoutResponsive = () => {
       {/* <main className="flex-grow container mx-auto px-4 py-8"> */}
       {/* <main className="flex min-h-screen flex-col items-center justify-between p-24"> */}
       <main className="flex items-center justify-center">
-
-        {/* <RainbowBorder>
-          <h2 className="text-xl font-semibold text-center">{data.main.title}</h2>
-          <ExampleUsage />
-        </RainbowBorder> */}
-        <div className="flex min-h-screen items-center justify-between p-24">
-          <ExampleUsage />
-        </div>
-
         <div className="mt-8">
-          <p className="text-lg mb-6">{data.main.content}</p>
+          {/* <p className="text-lg mb-6">{data.main.content}</p>
           <ul className="space-y-4">
             {data.main.features.map((feature, index) => (
               <li key={index} className="flex items-center">
@@ -174,8 +166,18 @@ const PageLayoutResponsive = () => {
                 {feature}
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
+        {/* <RobotCalculator /> */}
+        <RobotCalculator />
+
+        {/* <RainbowBorder>
+          <h2 className="text-xl font-semibold text-center">{data.main.title}</h2>
+          <ExampleUsage />
+        </RainbowBorder> */}
+        {/* <div className="flex min-h-screen items-center justify-between p-24">
+          <ExampleUsage />
+        </div> */}
       </main>
 
       {/* Footer */}
