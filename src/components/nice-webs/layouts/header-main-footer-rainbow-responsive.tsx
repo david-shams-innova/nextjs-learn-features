@@ -173,8 +173,8 @@ const PageLayoutResponsive = () => {
         </div>
         {/* <RobotCalculator /> */}
         <AnimatedRobot />
-        <PDFViewerButton label="View PDF" pdfPath="./FTHB_Mortgage_Format_document.pdf" />
-        <ViewPDF pdfDocument="FTHB_Mortgage_Format_document.pdf" />
+        <PDFViewerButton label="View Application" pdfPath="/FTHB_Mortgage_Format_document.pdf" />
+        {/* <ViewPDF pdfDocument="FTHB_Mortgage_Format_document.pdf" /> */}
 
       </main>
 

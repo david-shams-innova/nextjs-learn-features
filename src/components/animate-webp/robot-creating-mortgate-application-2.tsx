@@ -1,4 +1,4 @@
-import Button from '@/app/components/ui/button'
+import Button from '@/app/components/pdf-viewer-button/ui/button/index'
 import React from 'react'
 // import { Button } from "@/components/ui/button"
 
