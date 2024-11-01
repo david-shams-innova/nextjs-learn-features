@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import ExampleUsage from "./robot-processint-application";
 import RobotCalculator from "@/components/animate-webp/robot-creating-mortgate-application-3";
+import AnimatedRobot from "@/app/components/animations/robot-application";
 
 const RainbowBorder = ({ children }) => (
   <div className="relative">
@@ -169,7 +170,7 @@ const PageLayoutResponsive = () => {
           </ul> */}
         </div>
         {/* <RobotCalculator /> */}
-        <RobotCalculator />
+        <AnimatedRobot />
 
         {/* <RainbowBorder>
           <h2 className="text-xl font-semibold text-center">{data.main.title}</h2>
