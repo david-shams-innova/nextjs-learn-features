@@ -1,0 +1,39 @@
+@keyframes processData {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+  }
+  
+  @keyframes colorChange {
+    0%, 90% { fill: #ff0000; }
+    100% { fill: #00ff00; }
+  }
+  
+  @keyframes documentAppear {
+    0%, 90% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes smile {
+    0%, 90% { d: path('M 150 280 Q 200 280 250 280'); }
+    100% { d: path('M 150 280 Q 200 300 250 280'); }
+  }
+  
+  .robotEye {
+    animation: colorChange 2s forwards;
+  }
+  
+  .robotMouth {
+    animation: smile 2s forwards;
+  }
+  
+  .robotMouthColor {
+    animation: colorChange 2s forwards;
+  }
+  
+  .processingCircle {
+    animation: processData 0.5s linear infinite;
+  }
+  
+  .document {
+    animation: documentAppear 2s forwards;
+  }

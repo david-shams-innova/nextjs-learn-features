@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import ExampleUsage from "./robot-processint-application";
 import RobotCalculator from "@/components/animate-webp/robot-creating-mortgate-application-3";
-import AnimatedRobot from "@/app/components/animations/robot-application";
+import AnimatedRobot from "@/app/components/animations/robot-application/nimated-robot.module";
 
 const RainbowBorder = ({ children }) => (
   <div className="relative">
