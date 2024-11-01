@@ -2,6 +2,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+# Remove API Keys from any commit:
+```sh
+# Use git filter-branch to remove the secret
+git filter-branch --force --index-filter \
+"git rm --cached --ignore-unmatch AI/0.embedding.ipynb" \
+--prune-empty --tag-name-filter cat -- --all
+```
+
+
 First, run the development server:
 
 ```bash
