@@ -1,9 +1,11 @@
-"use client";
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
-import ExampleUsage from "./robot-processint-application";
-import RobotCalculator from "@/components/animate-webp/robot-creating-mortgate-application-3";
-import AnimatedRobot from "@/app/components/animations/robot-application/nimated-robot.module";
+"use client"
+import React, { useState } from "react"
+import { Menu, X } from "lucide-react"
+import ExampleUsage from "./robot-processint-application"
+import RobotCalculator from "@/components/animate-webp/robot-creating-mortgate-application-3"
+import AnimatedRobot from "@/app/components/animations/robot-application/nimated-robot.module"
+import ViewPDF from "@/components/view-pdf/view-pdf"
+import PDFViewerButton from "@/app/components/pdf-viewer-button"
 
 const RainbowBorder = ({ children }) => (
   <div className="relative">
@@ -65,7 +67,7 @@ const RainbowBorder = ({ children }) => (
       </foreignObject>
     </svg>
   </div>
-);
+)
 
 const MobileMenu = ({ isOpen, onClose, navigation }) => (
   <div
@@ -92,10 +94,10 @@ const MobileMenu = ({ isOpen, onClose, navigation }) => (
       </ul>
     </nav>
   </div>
-);
+)
 
 const PageLayoutResponsive = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Example dynamic data
   const data = {
@@ -117,7 +119,7 @@ const PageLayoutResponsive = () => {
       links: ["Privacy", "Terms", "Support"],
       social: ["Twitter", "Facebook", "Instagram"],
     },
-  };
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -171,14 +173,9 @@ const PageLayoutResponsive = () => {
         </div>
         {/* <RobotCalculator /> */}
         <AnimatedRobot />
+        <PDFViewerButton label="View PDF" pdfPath="./FTHB_Mortgage_Format_document.pdf" />
+        <ViewPDF pdfDocument="FTHB_Mortgage_Format_document.pdf" />
 
-        {/* <RainbowBorder>
-          <h2 className="text-xl font-semibold text-center">{data.main.title}</h2>
-          <ExampleUsage />
-        </RainbowBorder> */}
-        {/* <div className="flex min-h-screen items-center justify-between p-24">
-          <ExampleUsage />
-        </div> */}
       </main>
 
       {/* Footer */}
@@ -216,7 +213,7 @@ const PageLayoutResponsive = () => {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default PageLayoutResponsive;
+export default PageLayoutResponsive

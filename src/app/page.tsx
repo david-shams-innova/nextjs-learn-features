@@ -3,7 +3,7 @@ import AnimateWebp from "@/components/animate-webp";
 import BoxAnimationLines from "./components/box-animation-lines/box-animation-lines";
 import CompoundInterestCalculator from "./components/stocks/compound-interest";
 import PageLayout from "@/components/nice-webs/layouts/header-main-footer-rainbow";
-import PageLayoutResponsive from "@/components/nice-webs/layouts/header-main-footer-rainbow-responsive";
+import PageLayoutResponsive from "../components/nice-webs/layouts/header-main-footer-rainbow-responsive";
 
 export default function Home() {
   return (
